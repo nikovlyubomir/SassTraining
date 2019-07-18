@@ -1,8 +1,4 @@
 @import 'utilities';
-$main-color: #ffbc00;
-$light-color:#f4f4f4;
-$medium-color: #ccc;
-$dark-color: #333;
 * {
     margin: 0;
     padding: 0;
@@ -72,4 +68,13 @@ img {
     background: #333 url('../img/showcase.jpg') no-repeat center center/cover;
     height: 100vh;
     color: #fff;
+}
+
+#header-content {
+    text-align: center;
+    padding-top: 20%;
+    h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+    }
 }

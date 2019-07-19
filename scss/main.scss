@@ -93,4 +93,30 @@ img {
             }
         }
     }
+    &-b {
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            li {
+                i {
+                    font-size: 2rem;
+                }
+                line-height: 2;
+                &.stats-title {
+                    font-size: 1.5rem;
+                }
+            }
+            div {
+                padding: 4rem 0;
+                &:nth-child(odd) {
+                    background-color: $light-color;
+                    color: $dark-color;
+                }
+                &:nth-child(even) {
+                    background-color: $dark-color;
+                    color: $light-color;
+                }
+            }
+        }
+    }
 }

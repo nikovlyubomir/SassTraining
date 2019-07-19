@@ -132,3 +132,21 @@ img {
   #home-a .specials .fas {
     color: #ffbc00;
     padding-bottom: 0.5rem; }
+
+#home-b .stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
+  #home-b .stats li {
+    line-height: 2; }
+    #home-b .stats li i {
+      font-size: 2rem; }
+    #home-b .stats li.stats-title {
+      font-size: 1.5rem; }
+  #home-b .stats div {
+    padding: 4rem 0; }
+    #home-b .stats div:nth-child(odd) {
+      background-color: #f4f4f4;
+      color: #333; }
+    #home-b .stats div:nth-child(even) {
+      background-color: #333;
+      color: #f4f4f4; }

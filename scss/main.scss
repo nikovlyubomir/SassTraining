@@ -1,7 +1,9 @@
 @import 'utilities';
-* {
-    margin: 0;
+html,
+body {
     padding: 0;
+    margin: 0;
+    height: 2000px;
 }
 
 body {
@@ -27,22 +29,15 @@ h4 {
 
 img {
     width: 100%;
-}
-
-#logo {
-    width: 70px;
-    height: 70px;
-    color: #fff;
+    left: 0;
 }
 
 //Main nav
 #main-nav {
     display: flex;
-    justify-content: space-between;
-    padding-top: 1rem;
-    ul {
-        display: flex;
-    }
+    justify-content: center;
+    align-items: center;
+    margin-top: 8.7rem;
     li {
         padding: 1rem 1.5rem;
     }
@@ -52,7 +47,8 @@ img {
         text-transform: uppercase;
         border-bottom: 3px transparent solid;
         padding-bottom: 0.5rem;
-        margin-right: 2rem;
+        margin-right: 4rem;
+        font-size: 1.7rem;
         transition: border-color 0.5s;
         &:hover {
             border-color: $medium-color;
@@ -61,6 +57,14 @@ img {
             border-color: $main-color;
         }
     }
+}
+
+.fixed nav {
+    background-color: #333;
+    position: fixed;
+    top: -160px;
+    left: 0;
+    right: 0;
 }
 
 //Header
@@ -80,41 +84,36 @@ img {
 }
 
 //Home section
-#home {
+#about {
     &-a {
-        .specials {
-            margin-top: 3rem;
-            display: grid;
-            grid-gap: 1rem;
-            grid-template-columns: repeat(4, 1fr);
-            .fas {
-                color: $main-color;
-                padding-bottom: 0.5rem;
+        .sta {
+            h2 {
+                font-size: 2rem;
+                color: #333;
             }
-        }
-    }
-    &-b {
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            li {
-                i {
-                    font-size: 2rem;
-                }
-                line-height: 2;
-                &.stats-title {
-                    font-size: 1.5rem;
-                }
+            p {
+                font-size: 1.5rem;
             }
-            div {
-                padding: 4rem 0;
-                &:nth-child(odd) {
+            .story {
+                padding-left: 6rem;
+                padding-right: 6rem;
+                padding-top: 4rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 3rem;
+                .img {
+                    background: #333 url('../img/poker-face.jpg') no-repeat center center/cover;
+                    width: auto;
+                    height: 60vh;
+                }
+                .info-me {
+                    border-left: $main-color 5px solid;
+                    padding: 2rem 1rem;
+                    h3 {
+                        color: #333;
+                    }
                     background-color: $light-color;
                     color: $dark-color;
-                }
-                &:nth-child(even) {
-                    background-color: $dark-color;
-                    color: $light-color;
                 }
             }
         }

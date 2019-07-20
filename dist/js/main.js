@@ -65,3 +65,13 @@ function init() {
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
 }
+
+$(function() {
+    h1Top = $("nav").position().top;
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > h1Top + 170)
+            $("body").addClass("fixed");
+        else
+            $("body").removeClass("fixed");
+    });
+});

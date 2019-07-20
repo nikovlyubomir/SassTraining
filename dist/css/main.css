@@ -62,9 +62,11 @@ input[class^='btn-']:hover {
 .my-4 {
   margin: 4rem 0; }
 
-* {
+html,
+body {
+  padding: 0;
   margin: 0;
-  padding: 0; }
+  height: 2000px; }
 
 body {
   font-family: 'Dosis', sans-serif;
@@ -84,19 +86,14 @@ h4 {
   color: white; }
 
 img {
-  width: 100%; }
-
-#logo {
-  width: 70px;
-  height: 70px;
-  color: #fff; }
+  width: 100%;
+  left: 0; }
 
 #main-nav {
   display: flex;
-  justify-content: space-between;
-  padding-top: 1rem; }
-  #main-nav ul {
-    display: flex; }
+  justify-content: center;
+  align-items: center;
+  margin-top: 8.7rem; }
   #main-nav li {
     padding: 1rem 1.5rem; }
   #main-nav a {
@@ -105,12 +102,20 @@ img {
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
-    margin-right: 2rem;
+    margin-right: 4rem;
+    font-size: 1.7rem;
     transition: border-color 0.5s; }
     #main-nav a:hover {
       border-color: #ccc; }
     #main-nav a.current {
       border-color: #ffbc00; }
+
+.fixed nav {
+  background-color: #333;
+  position: fixed;
+  top: -160px;
+  left: 0;
+  right: 0; }
 
 #header-home {
   background: #333 url("../img/showcase.jpg") no-repeat center center/cover;
@@ -124,29 +129,28 @@ img {
     font-size: 4rem;
     line-height: 1.2; }
 
-#home-a .specials {
-  margin-top: 3rem;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(4, 1fr); }
-  #home-a .specials .fas {
-    color: #ffbc00;
-    padding-bottom: 0.5rem; }
+#about-a .sta h2 {
+  font-size: 2rem;
+  color: #333; }
 
-#home-b .stats {
+#about-a .sta p {
+  font-size: 1.5rem; }
+
+#about-a .sta .story {
+  padding-left: 6rem;
+  padding-right: 6rem;
+  padding-top: 4rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); }
-  #home-b .stats li {
-    line-height: 2; }
-    #home-b .stats li i {
-      font-size: 2rem; }
-    #home-b .stats li.stats-title {
-      font-size: 1.5rem; }
-  #home-b .stats div {
-    padding: 4rem 0; }
-    #home-b .stats div:nth-child(odd) {
-      background-color: #f4f4f4;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3rem; }
+  #about-a .sta .story .img {
+    background: #333 url("../img/poker-face.jpg") no-repeat center center/cover;
+    width: auto;
+    height: 60vh; }
+  #about-a .sta .story .info-me {
+    border-left: #ffbc00 5px solid;
+    padding: 2rem 1rem;
+    background-color: #f4f4f4;
+    color: #333; }
+    #about-a .sta .story .info-me h3 {
       color: #333; }
-    #home-b .stats div:nth-child(even) {
-      background-color: #333;
-      color: #f4f4f4; }
